@@ -1,0 +1,21 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "next build",
+  "devCommand": "next dev",
+  "installCommand": "npm install",
+  "env": {
+    "LIVE_ENDPOINT_URL": {
+      "description": "XML endpoint URL for live data",
+      "required": true
+    },
+    "UPCOMING_ENDPOINT_URL": {
+      "description": "XML endpoint URL for upcoming data", 
+      "required": true
+    }
+  },
+  "functions": {
+    "pages/api/*.js": {
+      "maxDuration": 30
+    }
+  }
+}
